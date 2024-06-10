@@ -23,6 +23,9 @@ app.use(cors(
         credentials: true
     }
 ));
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
 
 app.use((req, res, next) => {
   console.log(req.path, req.method);
